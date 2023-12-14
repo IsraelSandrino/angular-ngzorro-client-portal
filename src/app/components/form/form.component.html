@@ -1,0 +1,66 @@
+
+<div>
+  <!-- Formulário Novo Chamado -->
+  <div>
+    <form
+    nz-form
+    >
+    <nz-form-item>
+      <nz-form-label [nzSpan]="4" nzRequired>Título</nz-form-label>
+      <nz-form-control [nzSpan]="28" nzValidatingTip="Validating...">
+          <input nz-input formControlName="userName" />
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label [nzSpan]="5" nzFor="prioridade" nzRequired>Prioridade</nz-form-label>
+        <nz-form-control [nzSpan]="12" nzErrorTip="Por favor selecione uma prioridade!">
+          <nz-select
+              id="prioridade"
+              formControlName="prioridade"
+              nzPlaceHolder="Selecione uma prioridade"
+              >
+              <nz-option nzValue="baixo" nzLabel="Baixo"></nz-option>
+              <nz-option nzValue="normal" nzLabel="Normal"></nz-option>
+              <nz-option nzValue="alto" nzLabel="Alto"></nz-option>
+              <nz-option nzValue="urgente" nzLabel="Urgente"></nz-option>
+            </nz-select>
+          </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label [nzSpan]="5" nzFor="grupo" nzRequired>Grupo</nz-form-label>
+          <nz-form-control [nzSpan]="12" nzErrorTip="Por favor selecione um grupo!">
+            <nz-select
+              id="grupo"
+              formControlName="grupo"
+              nzPlaceHolder="Selecione um grupo"
+            >
+              <nz-option nzValue="suporte" nzLabel="Suporte"></nz-option>
+              <nz-option nzValue="servicos" nzLabel="Serviços"></nz-option>
+              <nz-option nzValue="financeiro" nzLabel="Financeiro"></nz-option>
+              <nz-option nzValue="desenvolvimento" nzLabel="Desenvolvimento"></nz-option>
+              <nz-option nzValue="administrativo" nzLabel="Administrativo"></nz-option>
+              <nz-option nzValue="diretoria" nzLabel="Diretoria"></nz-option>
+              <nz-option nzValue="juridico" nzLabel="Juridico"></nz-option>
+              <nz-option nzValue="sucesso" nzLabel="Sucesso do cliente"></nz-option>
+              <nz-option nzValue="estoque" nzLabel="Estoque & Suprimentos"></nz-option>
+              <nz-option nzValue="comercial" nzLabel="Comercial"></nz-option>
+            </nz-select>
+          </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+          <nz-form-label [nzSpan]="4">Placa do veículo</nz-form-label>
+          <nz-form-control [nzSpan]="28" nzValidatingTip="Validating...">
+            <input nz-input formControlName="placa" />
+          </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+          <nz-form-label [nzSpan]="4" nzRequired>Descrição</nz-form-label>
+        <nz-form-control [nzSpan]="28" nzErrorTip="Por favor, descreva a sua solicitação!">
+          <nz-textarea-count [nzMaxCharacterCount]="2000">
+            <textarea formControlName="descricao" nz-input rows="2"></textarea>
+          </nz-textarea-count>
+        </nz-form-control>
+      </nz-form-item>
+    </form>
+  </div>
+</div>

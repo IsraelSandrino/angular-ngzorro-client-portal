@@ -1,0 +1,14 @@
+<button nz-button nzType="primary" (click)="showModal()">
+  <span>{{ modalButtonName }}</span>
+</button>
+<nz-modal
+  [(nzVisible)]="isVisible"
+  [nzTitle]="modalTitle"
+  (nzOnCancel)="handleCancel()"
+  (nzOnOk)="handleOk()"
+  [nzOkLoading]="isOkLoading"
+>
+  <div *nzModalContent>
+    <app-form></app-form>
+  </div>
+</nz-modal>

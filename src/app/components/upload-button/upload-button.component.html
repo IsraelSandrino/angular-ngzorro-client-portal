@@ -1,0 +1,12 @@
+<div>
+  <nz-upload
+    nzAction="https://www.mocky.io/v2/5cc8019d300000980a055e76"
+    [nzHeaders]="{ authorization: 'json' }"
+    (nzChange)="handleChange($event)"
+  >
+    <button nz-button nzType="primary">
+      <span nz-icon nzType="upload"></span>
+      Enviar Documento
+    </button>
+  </nz-upload>
+</div>

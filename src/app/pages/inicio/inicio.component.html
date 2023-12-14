@@ -1,0 +1,167 @@
+<div>
+  <h1>
+    Bem vindo ao Portal Wikidados!<span>&#9995;</span>
+  </h1>
+
+  <nz-space nzDirection="vertical">
+    <nz-alert
+    *nzSpaceItem
+    nzType="warning"
+    nzDescription="Este é o seu portal do cliente, como podemos ajuda-lo hoje?"
+    ></nz-alert>
+
+    <nz-card *nzSpaceItem nzTitle="O que você gostaria de fazer?">
+      <div class="inicio__card-actions__content">
+        <span>Chamados</span>
+
+        <app-modal
+          [modalButtonName]="'Novo Chamado'"
+          [modalTitle]="'Adicionar Novo Chamado'"
+        ></app-modal>
+        <a [routerLink]="'/chamados'" nz-button nzType="primary" style="width: fit-content;">Chamados Abertos</a>
+      </div>
+
+      <div class="inicio__card-actions__content">
+        <span style="margin-top: 12px;">Documentos</span>
+
+        <app-upload-button
+
+        ></app-upload-button>
+      </div>
+    </nz-card>
+
+    <nz-card *nzSpaceItem nzTitle="Últimos Tickets">
+      <!-- Chamado 1 -->
+      <div>
+        <div class="inicio__last-tickets__header">
+          <a [routerLink]="'../chamados/chamado-view'">Conferência de comunicação Ana Maria Siliprandi</a>
+
+          <nz-tag nzMode="default" nzColor="#5cb85c" style="width: fit-content;">
+            <span>
+              Fechado
+            </span>
+          </nz-tag>
+        </div>
+
+        <div>
+          <p>
+            Bom dia,
+            Pode verificar, por favor se os equipamentos da cliente Ana Maria
+            Siliprandi estão comunicando normalmente.<br><br>
+            Se sim, quantos comunicando?<br><br>
+            Desde já agradeço!<br><br>
+            Atenciosamente,<br><br>
+            [image: Assinatura e-mail Wiki Oficial_Cleuza Gomes.png]
+          </p>
+        </div>
+      </div>
+
+      <nz-divider></nz-divider>
+
+      <!-- Chamado 2 -->
+      <div>
+        <div class="inicio__last-tickets__header">
+          <a href="">Vinculação de Projeto</a>
+
+          <nz-tag nzMode="default" nzColor="#5cb85c" style="width: fit-content;">
+            <span>
+              Fechado
+            </span>
+          </nz-tag>
+        </div>
+
+        <div>
+          <p>
+            Esse chamado é um teste para verificar a vinculação de um projeto à um chamado.
+          </p>
+        </div>
+      </div>
+
+      <nz-divider></nz-divider>
+
+      <!-- Chamado 3 -->
+      <div>
+        <div class="inicio__last-tickets__header">
+          <a href="">Novo assinante ativo (primeiro pagamento liquidado)</a>
+
+          <nz-tag nzMode="default" nzColor="#5cb85c" style="width: fit-content;">
+            <span>
+              Fechado
+            </span>
+          </nz-tag>
+        </div>
+
+        <div>
+          <p>
+            Opa! Tem novo cliente na área! =D<br><br>
+            Este cliente contratou e já efetuou o pagamento da primeira cobrança.<br><br>
+            Nome: Globoaves Sao Paulo Agroavicola Ltda
+            E-mail: gabriel.freitas@globoaves.com.br
+            Telefone: 4532182000
+            Cidade: Cascavel
+            Estado: PR
+            CEP: 85820-899
+            Plano contratado: Wiki_Premium
+            Valor do plano: 34.274,16
+            Data do primeiro pagamento: 17/10/2023<br><br>
+            Wiki SoluçõesROD BR-277 KM 583, S/N - Sala 3 - Cataratas85818-560 Cascavel/PR
+          </p>
+        </div>
+      </div>
+
+      <nz-divider></nz-divider>
+
+      <!-- Chamado 4 -->
+      <div>
+        <div class="inicio__last-tickets__header">
+          <a href="">Relatório tecnico - Funcionamento Cliente L & L Transportes</a>
+
+          <nz-tag nzMode="default" nzColor="#5cb85c" style="width: fit-content;">
+            <span>
+              Fechado
+            </span>
+          </nz-tag>
+        </div>
+
+        <div>
+          <p>
+            Boa Tarde,<br><br>
+            Preciso de um parecer técnico de funcionamento, formalizado de todos os
+            serviços contratados pelo Cliente L & L Transportes Ltda (TransIguau) -
+            CNPJ: 08.602.200/0001-26.<br><br>
+            É necessário descrição de todos os serviços e seu funcionamento. Desde a
+            data de contratação 31/07/2023.<br><br>
+            Fico no aguardo.<br><br>
+            Qualquer dúvida estou à disposição.<br><br>
+            Atenciosamente.<br><br>
+            *Catia Alchieri SantosFinanceiro - Wikidados*
+          </p>
+        </div>
+      </div>
+
+      <nz-divider></nz-divider>
+
+      <!-- Chamado 5 -->
+      <div>
+        <div class="inicio__last-tickets__header">
+          <a href="">Sugestão título dos ativos no App Mobile</a>
+
+          <nz-tag nzMode="default" nzColor="#d9534f" style="width: fit-content;">
+            <span>
+              Aberto
+            </span>
+          </nz-tag>
+        </div>
+
+        <div>
+          <p>
+            Atualmente a nomenclatura apresentada para o cliente está como (descrição) - (placa).
+            Outro adendo é que ao clicar para selecionar um ativo, a nomenclatura retornada é (id do ativo no bd) - (descrição) - (placa). Alguns clientes têm confundido o ID com o número de frota. Uma sugestão seria retirar a informação do ID.<br><br>
+            Muitos de nossos clientes fazem o controle dos ativos através do número de frota e/ou placa. Sendo assim, uma maneira melhor de apresentar o produto ao cliente, é utilizar a nomenclatura como:<br><br>
+            (placa - frota)
+          </p>
+        </div>
+      </div>
+    </nz-card>
+  </nz-space>
+</div>

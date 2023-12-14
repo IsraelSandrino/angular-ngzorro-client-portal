@@ -1,0 +1,74 @@
+nz-sider {
+  position: relative;
+  margin-top: 63px;
+  height: calc(100% - 63px);
+  z-index: 100;
+
+  @media (max-width: 992px) {
+    position: fixed;
+    margin-top: 64px;
+    height: calc(100% - 64px);
+  }
+}
+
+.layout {
+  min-height: 100vh;
+}
+
+nz-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  background: #333;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  left: 0;
+}
+
+.trigger {
+  font-size: 18px;
+  line-height: 64px;
+  padding: 0 24px;
+  cursor: pointer;
+  transition: color 0.3s;
+  color: #cecece;
+}
+
+.trigger:hover {
+  color: #fff;
+}
+
+.logo__desktop > img {
+  height: 50px;
+}
+
+.account-button {
+  background: none;
+  border: none;
+  margin-right: 24px;
+  color: #cecece;
+}
+
+.account-button:hover {
+  color: #fff;
+  cursor: pointer;
+}
+
+.account-menu-option {
+  color: #000;
+}
+
+nz-content {
+  margin: 80px 16px 24px 16px;
+}
+
+.inner-content {
+  padding: 24px;
+  background: #fff;
+  min-height: 360px;
+}
+
+nz-footer {
+  text-align: center;
+}

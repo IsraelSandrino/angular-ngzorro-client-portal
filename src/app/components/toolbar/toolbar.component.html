@@ -1,0 +1,29 @@
+<div class="toolbar__content">
+  <div class="toolbar__tabs">
+    <nz-radio-group [(ngModel)]="radioValue" nzButtonStyle="solid" *ngIf="showTicketsOptions">
+      <label nz-radio-button nzValue="my-tickets">Meus</label>
+      <label nz-radio-button nzValue="all-tickets">Todos</label>
+    </nz-radio-group>
+
+    <app-modal
+      *ngIf="showModalButton"
+      [modalButtonName]="modalButtonName"
+      [modalTitle]="modalTitle"
+    ></app-modal>
+  </div>
+
+  <div *ngIf="showSelectOptions">
+    <nz-select ngModel="all-tickets">
+      <nz-option nzValue="all-tickets" nzLabel="Todos os Chamados"></nz-option>
+      <nz-option nzValue="open" nzLabel="Aberto"></nz-option>
+      <nz-option nzValue="in-progress" nzLabel="Em andamento"></nz-option>
+      <nz-option nzValue="waiting-for-response" nzLabel="Aguardando retorno"></nz-option>
+      <nz-option nzValue="closed" nzLabel="Fechado"></nz-option>
+      <nz-option nzValue="escalado" nzLabel="Escalado"></nz-option>
+    </nz-select>
+  </div>
+
+  <div *ngIf="showExportButton">
+    <button nz-button nzType="primary" nzBlock="true">Exportar Chamados</button>
+  </div>
+</div>
