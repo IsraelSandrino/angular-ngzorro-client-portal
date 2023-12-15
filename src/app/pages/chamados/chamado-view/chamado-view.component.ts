@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./chamado-view.component.less']
 })
 export class ChamadoViewComponent {
-
+  onBack(): void {
+    console.log('onBack');
+  }
 }

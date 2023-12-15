@@ -1,1 +1,174 @@
-<p>chamado-view works!</p>
+<div>
+  <div class="site-page-header-ghost-wrapper">
+    <nz-page-header nzBackIcon [nzGhost]="false">
+      <nz-page-header-title>Chamados</nz-page-header-title>
+      <nz-page-header-extra>
+        <app-modal
+          [modalButtonName]="'Editar'"
+          [modalTitle]="'Editar Chamado'"
+        ></app-modal>
+      </nz-page-header-extra>
+    </nz-page-header>
+  </div>
+
+  <div>
+    <nz-tabset>
+      <nz-tab nzTitle="Resumo">
+        <!-- Data-criação -->
+        <div nz-row>
+          <div nz-col nzSpan="12">
+            <span class="chamado-view__resumo__info-subtitle">Data Criação</span>
+          </div>
+          <div nz-col nzSpan="12">
+            <span>12-05-2021 14:45</span>
+          </div>
+        </div>
+        <nz-divider></nz-divider>
+        <!-- Data fechamento -->
+        <div nz-row>
+          <div nz-col nzSpan="12">
+            <span class="chamado-view__resumo__info-subtitle">Data Fechamento</span>
+          </div>
+          <div nz-col nzSpan="12">
+            <span>11-12-2023</span>
+          </div>
+        </div>
+        <nz-divider></nz-divider>
+        <!-- Descrição -->
+        <div nz-row>
+          <div nz-col nzSpan="24">
+            <span class="chamado-view__resumo__info-subtitle">Descrição</span>
+            <p class="chamado-view__resumo__descricao-solucao">
+              Bom dia,<br><br>
+              Pode verificar, por favor se os equipamentos da cliente Ana Maria
+              Siliprandi estão comunicando normalmente.<br><br>
+              Se sim, quantos comunicando?<br><br>
+              Desde já agradeço!<br><br>
+              Atenciosamente,<br><br>
+              [image: Assinatura e-mail Wiki Oficial_Cleuza Gomes.png]
+            </p>
+          </div>
+        </div>
+        <nz-divider></nz-divider>
+        <!-- Grupo -->
+        <div nz-row>
+          <div nz-col nzSpan="12">
+            <span class="chamado-view__resumo__info-subtitle">Grupo</span>
+          </div>
+          <div nz-col nzSpan="12">
+            <span>Suporte</span>
+          </div>
+        </div>
+        <nz-divider></nz-divider>
+        <!-- Nome Contato -->
+        <div nz-row>
+          <div nz-col nzSpan="12">
+            <span class="chamado-view__resumo__info-subtitle">Nome Contato</span>
+          </div>
+          <div nz-col nzSpan="12">
+            <span>Financeiro Wikidados</span>
+          </div>
+        </div>
+        <nz-divider></nz-divider>
+        <!-- Número Chamado -->
+        <div nz-row>
+          <div nz-col nzSpan="12">
+            <span class="chamado-view__resumo__info-subtitle">Número Chamado</span>
+          </div>
+          <div nz-col nzSpan="12">
+            <span>#6653</span>
+          </div>
+        </div>
+        <nz-divider></nz-divider>
+        <!-- Placa do veículo -->
+        <div nz-row>
+          <div nz-col nzSpan="12">
+            <span class="chamado-view__resumo__info-subtitle">Placa do veículo</span>
+          </div>
+          <div nz-col nzSpan="12">
+            <span></span>
+          </div>
+        </div>
+        <nz-divider></nz-divider>
+        <!-- Prioridade -->
+        <div nz-row>
+          <div nz-col nzSpan="12">
+            <span class="chamado-view__resumo__info-subtitle">Prioridade</span>
+          </div>
+          <div nz-col nzSpan="12">
+            <span>Baixo</span>
+          </div>
+        </div>
+        <nz-divider></nz-divider>
+        <!-- Responsável -->
+        <div nz-row>
+          <div nz-col nzSpan="12">
+            <span class="chamado-view__resumo__info-subtitle">Responsável</span>
+          </div>
+          <div nz-col nzSpan="12">
+            <span>Sidinei Albuquerque</span>
+          </div>
+        </div>
+        <nz-divider></nz-divider>
+        <!-- Solução -->
+        <div nz-row>
+          <div nz-col nzSpan="24">
+            <span class="chamado-view__resumo__info-subtitle">Solução</span>
+
+            <p class="chamado-view__resumo__descricao-solucao">
+              Apenas dois comunicam com regularidade, Trator Siliprand , AJX7792 e NH 7630 0014. <br><br>
+              Trator Siliprand 12/05/2021 14:13:01
+              AJX7792 12/05/2021 09:35:40
+              NH 7630 0014 11/05/2021 07:11:13
+              --------------------------------------------------------------
+              NH 7630 Alvorada 30/04/2021 07:25:57
+              TM135 GUA 10/03/2020 04:37:49
+              7630 Juvinopoles 16/12/2019 14:05:14 <br><br>
+              Alguns tratores não comunicam pois ficam , provavelmente , em locais com baixa qualidade de sinal.</p>
+          </div>
+        </div>
+        <nz-divider></nz-divider>
+        <!-- Status -->
+        <div nz-row>
+          <div nz-col nzSpan="12">
+            <span class="chamado-view__resumo__info-subtitle">Status</span>
+          </div>
+          <div nz-col nzSpan="12">
+            <span>Fechado</span>
+          </div>
+        </div>
+      </nz-tab>
+
+      <nz-tab nzTitle="Atualizações">
+        <nz-timeline>
+          <nz-timeline-item>Create a services site 2015-09-01</nz-timeline-item>
+          <nz-timeline-item>Solve initial network problems 2015-09-01</nz-timeline-item>
+          <nz-timeline-item>Technical testing 2015-09-01</nz-timeline-item>
+          <nz-timeline-item>Network problems being solved 2015-09-01</nz-timeline-item>
+        </nz-timeline>
+      </nz-tab>
+
+      <nz-tab nzTitle="Comentários">
+        <app-comment></app-comment>
+
+        <nz-divider></nz-divider>
+
+        <textarea
+          nz-input
+          placeholder="Adicione seu comentário aqui ..."
+          [nzAutosize]="{ minRows: 3, maxRows: 6 }"
+        ></textarea>
+
+        <button
+          nz-button
+          [nzType]="'primary'"
+          class="chamado-view__comentarios__submit-button"
+        >Postar</button>
+      </nz-tab>
+
+      <nz-tab nzTitle="Documentos">
+        <app-upload-button></app-upload-button>
+      </nz-tab>
+    </nz-tabset>
+  </div>
+</div>

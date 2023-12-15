@@ -26,6 +26,10 @@ import { NzListModule } from 'ng-zorro-antd/list';
 import { NzFormModule } from 'ng-zorro-antd/form';
 import { NzUploadModule } from 'ng-zorro-antd/upload';
 import { NzMessageModule } from 'ng-zorro-antd/message';
+import { NzPageHeaderModule } from 'ng-zorro-antd/page-header';
+import { NzGridModule } from 'ng-zorro-antd/grid';
+import { NzTimelineModule } from 'ng-zorro-antd/timeline';
+import { NzCommentModule } from 'ng-zorro-antd/comment';
 
 @NgModule({
   declarations: [],
@@ -55,7 +59,11 @@ import { NzMessageModule } from 'ng-zorro-antd/message';
     NzListModule,
     NzFormModule,
     NzUploadModule,
-    NzMessageModule
+    NzMessageModule,
+    NzPageHeaderModule,
+    NzGridModule,
+    NzTimelineModule,
+    NzCommentModule
   ]
 })
 export class NgZorroAntdModule { }
