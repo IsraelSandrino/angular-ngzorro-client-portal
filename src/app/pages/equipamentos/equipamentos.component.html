@@ -1,27 +1,35 @@
 <div>
   <h3>Equipamentos</h3>
 
+  <div>
+    <app-toolbar
+      [showModalButton]="false"
+      [showSelectOptions]="false"
+      [showExportButton]="false"
+    ></app-toolbar>
+  </div>
+
   <nz-divider></nz-divider>
 
   <div>
     <nz-list nzBordered>
       <nz-list-item>
-        <a href="" style="color: #000; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+        <a [routerLink]="'../equipamentos/equipamento-view'" style="color: #000; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
           <span>SEU9C86</span>
         </a>
       </nz-list-item>
       <nz-list-item>
-        <a href="" style="color: #000; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+        <a [routerLink]="'../equipamentos/equipamento-view'" style="color: #000; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
           <span>BEZ3C30</span>
         </a>
       </nz-list-item>
       <nz-list-item>
-        <a href="" style="color: #000; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+        <a [routerLink]="'../equipamentos/equipamento-view'" style="color: #000; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
           <span>BBQ9170</span>
         </a>
       </nz-list-item>
       <nz-list-item>
-        <a href="" style="color: #000; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+        <a [routerLink]="'../equipamentos/equipamento-view'" style="color: #000; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
           <span>ATP4E23</span>
         </a>
       </nz-list-item>
