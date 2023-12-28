@@ -1,0 +1,101 @@
+<div>
+  <div class="site-page-header-ghost-wrapper">
+    <nz-page-header nzBackIcon [nzGhost]="false">
+      <nz-page-header-title>Projetos</nz-page-header-title>
+      <nz-page-header-extra>
+        <app-upload-button
+          title
+        ></app-upload-button>
+      </nz-page-header-extra>
+    </nz-page-header>
+  </div>
+
+  <div>
+    <nz-tabset>
+      <nz-tab nzTitle="Resumo">
+        <!-- Título -->
+        <div nz-row>
+          <div nz-col nzSpan="12">
+            <span class="projeto-view__resumo__info-subtitle">Título</span>
+          </div>
+          <div nz-col nzSpan="12">
+            <span>Health Check - Produtos e Serviços</span>
+          </div>
+        </div>
+        <nz-divider></nz-divider>
+        <!-- Categoria -->
+        <div nz-row>
+          <div nz-col nzSpan="12">
+            <span class="projeto-view__resumo__info-subtitle">Categoria</span>
+          </div>
+          <div nz-col nzSpan="12">
+            <span>Outros</span>
+          </div>
+        </div>
+        <nz-divider></nz-divider>
+        <!-- Contrato -->
+        <div nz-row>
+          <div nz-col nzSpan="12">
+            <span class="projeto-view__resumo__info-subtitle">Contrato</span>
+          </div>
+          <div nz-col nzSpan="12">
+            <span>-</span>
+          </div>
+        </div>
+        <nz-divider></nz-divider>
+        <!-- Responsável -->
+        <div nz-row>
+          <div nz-col nzSpan="12">
+            <span class="projeto-view__resumo__info-subtitle">Responsável</span>
+          </div>
+          <div nz-col nzSpan="12">
+            <span>Leonardo Almeida</span>
+          </div>
+        </div>
+        <nz-divider></nz-divider>
+        <!-- Status -->
+        <div nz-row>
+          <div nz-col nzSpan="12">
+            <span class="projeto-view__resumo__info-subtitle">Status</span>
+          </div>
+          <div nz-col nzSpan="12">
+            <span>Execução</span>
+          </div>
+        </div>
+      </nz-tab>
+
+      <nz-tab nzTitle="Atualizações">
+        <nz-timeline>
+          <nz-timeline-item>Create a services site 2015-09-01</nz-timeline-item>
+        </nz-timeline>
+      </nz-tab>
+
+      <nz-tab nzTitle="Comentários">
+        <div>
+          <app-comment></app-comment>
+        </div>
+
+        <nz-divider></nz-divider>
+
+        <div>
+          <textarea
+            nz-input
+            placeholder="Adicione seu comentário aqui ..."
+            [nzAutosize]="{ minRows: 3, maxRows: 6 }"
+          ></textarea>
+
+          <div class="projeto-view__comentarios__submit-button">
+            <button
+              nz-button
+              [nzType]="'primary'"
+            >Postar</button>
+          </div>
+        </div>
+      </nz-tab>
+
+      <nz-tab nzTitle="Documentos">
+        <nz-empty></nz-empty>
+      </nz-tab>
+    </nz-tabset>
+  </div>
+</div>

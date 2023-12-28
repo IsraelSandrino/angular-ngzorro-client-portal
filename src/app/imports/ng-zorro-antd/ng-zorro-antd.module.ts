@@ -30,6 +30,7 @@ import { NzPageHeaderModule } from 'ng-zorro-antd/page-header';
 import { NzGridModule } from 'ng-zorro-antd/grid';
 import { NzTimelineModule } from 'ng-zorro-antd/timeline';
 import { NzCommentModule } from 'ng-zorro-antd/comment';
+import { NzEmptyModule } from 'ng-zorro-antd/empty';
 
 @NgModule({
   declarations: [],
@@ -63,7 +64,8 @@ import { NzCommentModule } from 'ng-zorro-antd/comment';
     NzPageHeaderModule,
     NzGridModule,
     NzTimelineModule,
-    NzCommentModule
+    NzCommentModule,
+    NzEmptyModule,
   ]
 })
 export class NgZorroAntdModule { }
