@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes, ExtraOptions } from '@angular/router';
-import { LoginComponent } from './pages/login/login.component';
+import { LoginComponent } from './login/login.component';
+import { authGuard } from './auth.guard';
 
 // const routesOptions: ExtraOptions = {
 //   scrollPositionRestoration: 'top'
@@ -28,8 +29,9 @@ import { LoginComponent } from './pages/login/login.component';
 // ];
 
 const routes: Routes = [
-  { path: '', loadChildren: () => import('./pages/public/public.module').then(m => m.PublicModule) },
-  { path: 'login', component: LoginComponent }
+  { path: '', loadChildren: () => import('./public/public.module').then(m => m.PublicModule) },
+  { path: 'private', loadChildren: () => import('./private/private.module').then(m => m.PrivateModule), canActivate: [authGuard] },
+  { path: 'login', component: LoginComponent}
 ];
 
 @NgModule({

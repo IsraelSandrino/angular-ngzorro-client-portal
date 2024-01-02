@@ -3,18 +3,9 @@ import { CommonModule } from '@angular/common';
 import { LandingComponent } from './landing.component';
 import { RouterModule } from '@angular/router';
 
-
-
 @NgModule({
-  declarations: [
-    LandingComponent
-  ],
-  exports: [
-    LandingComponent
-  ],
-  imports: [
-    CommonModule,
-    RouterModule
-  ]
+  declarations: [ LandingComponent ],
+  exports: [ LandingComponent ],
+  imports: [ CommonModule, RouterModule ],
 })
 export class LandingModule { }

@@ -5,31 +5,35 @@
   justify-content: center;
   flex-direction: column;
 
-  h1 {
+  h1{
     color: #333;
     text-transform: uppercase;
   }
 
-  input {
+  input{
     background-color: #ccc;
     color: #666;
-    padding: 20px 20px;
-    border: 0px;
+    padding: 10px 20px;
+    border: 0;
     margin-bottom: 10px;
-    width: 200px;
+    width: 300px;
   }
 
-  button {
-    width: 200px;
+  button{
+    width: 300px;
     text-align: center;
     padding: 20px 0;
     background-color: #5C2EE4;
     color: #fff;
-    border: 0px;
+    border: 0;
     outline: none;
     margin-top: 40px;
     text-transform: uppercase;
     cursor: pointer;
-  }
 
+    &[disabled]{
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+  }
 }
