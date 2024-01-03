@@ -1,3 +1,102 @@
-<h1>Users Page</h1>
+<nz-layout class="layout">
+  <nz-sider
+    nzCollapsible
+    [(nzCollapsed)]="isCollapsed"
+    nzBreakpoint="lg"
+    [nzCollapsedWidth]="0"
+    [nzTrigger]="null">
+    <ul nz-menu nzTheme="dark" nzMode="inline">
+      <li nz-menu-item nzMatchRouter>
+        <a [routerLink]="'./inicio'">
+          <span span nz-icon nzType="home"></span>
+          <span>Início</span>
+        </a>
+      </li>
+      <li nz-menu-item nzMatchRouter>
+        <a [routerLink]="'./faq'">
+          <span nz-icon nzType="question-circle"></span>
+          <span>FAQ</span>
+        </a>
+      </li>
+      <li nz-menu-item nzMatchRouter>
+        <a [routerLink]="'./chamados'">
+          <span nz-icon nzType="tags"></span>
+          <span>Chamados</span>
+        </a>
+      </li>
+      <li nz-menu-item nzMatchRouter>
+        <a [routerLink]="'./faturas'">
+          <span nz-icon nzType="barcode"></span>
+          <span>Faturas</span>
+        </a>
+      </li>
+      <li nz-menu-item nzMatchRouter>
+        <a [routerLink]="'./cotacoes'">
+          <span nz-icon nzType="dollar"></span>
+          <span>Cotações</span>
+        </a>
+      </li>
+      <li nz-menu-item nzMatchRouter>
+        <a [routerLink]="'./documentos'">
+          <span nz-icon nzType="file"></span>
+          <span>Documentos</span>
+        </a>
+      </li>
+      <li nz-menu-item nzMatchRouter>
+        <a [routerLink]="'./equipamentos'">
+          <span nz-icon nzType="car"></span>
+          <span>Equipamentos</span>
+        </a>
+      </li>
+      <li nz-menu-item nzMatchRouter>
+        <a [routerLink]="'./projetos'">
+          <span nz-icon nzType="flag"></span>
+          <span>Projetos</span>
+        </a>
+      </li>
+      <li nz-menu-item nzMatchRouter>
+        <a [routerLink]="'./contratos'">
+          <span nz-icon nzType="solution"></span>
+          <span>Contratos</span>
+        </a>
+      </li>
+    </ul>
+  </nz-sider>
+  <nz-layout>
+    <nz-header>
+      <span
+        class="trigger"
+        nz-icon
+        [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
+        (click)="isCollapsed = !isCollapsed"
+      ></span>
 
-<button (click)="logout()">Log Out</button>
+      <div class="logo__desktop">
+        <img src="" alt="">
+        <img src="https://crm.wikidados.com.br/portal/layouts/default/resources/images/logo_horizontal_cinza.png" alt="">
+      </div>
+
+      <div>
+        <button class="account-button" nz-dropdown nzTrigger="click" [nzDropdownMenu]="menu">
+          <nz-badge [nzCount]="5" style="margin-right: 24px;">
+            <nz-avatar nzIcon="user" [nzShape]="'square'"></nz-avatar>
+          </nz-badge>
+          <span nz-icon nzType="down"></span>
+        </button>
+        <nz-dropdown-menu #menu="nzDropdownMenu">
+          <ul nz-menu>
+            <li nz-menu-item><a class="account-menu-option" [routerLink]="'./perfil'">Perfil</a></li>
+            <li nz-menu-item><a class="account-menu-option" [routerLink]="'/alterar-senha'">Alterar Senha</a></li>
+            <li nz-menu-divider></li>
+            <button class="logout-button" (click)="logout()">Log Out</button>
+          </ul>
+        </nz-dropdown-menu>
+      </div>
+    </nz-header>
+    <nz-content>
+      <div class="inner-content">
+        <router-outlet></router-outlet>
+      </div>
+    </nz-content>
+  </nz-layout>
+</nz-layout>

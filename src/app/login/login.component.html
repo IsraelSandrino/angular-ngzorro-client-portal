@@ -5,6 +5,4 @@
   <input type="password" formControlName="password" placeholder="Password">
 
   <button (click)="login()" [disabled]="!form.valid">Log In</button>
-
-  {{ form.value | json}}
 </div>

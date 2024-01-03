@@ -7,6 +7,7 @@ import { AuthService } from 'src/app/auth.service';
   styleUrls: ['./users-page.component.less']
 })
 export class UsersPageComponent {
+  isCollapsed: boolean = false;
 
   constructor(private authService: AuthService) {}
 

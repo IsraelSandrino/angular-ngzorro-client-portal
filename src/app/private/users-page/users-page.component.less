@@ -1,0 +1,91 @@
+nz-sider {
+  position: relative;
+  margin-top: 63px;
+  min-height: calc(100% - 63px);
+  z-index: 10;
+
+  @media (max-width: 992px) {
+    position: fixed;
+    margin-top: 64px;
+    height: calc(100% - 64px);
+  }
+}
+
+.layout {
+  min-height: 100vh;
+}
+
+nz-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  background: #333;
+  position: fixed;
+  z-index: 20;
+  width: 100%;
+  left: 0;
+}
+
+.trigger {
+  font-size: 18px;
+  line-height: 64px;
+  padding: 0 24px;
+  cursor: pointer;
+  transition: color 0.3s;
+  color: #cecece;
+}
+
+.trigger:hover {
+  color: #fff;
+}
+
+.logo__desktop > img {
+  height: 50px;
+}
+
+.account-button {
+  background: none;
+  border: none;
+  margin-right: 24px;
+  color: #cecece;
+}
+
+.account-button:hover {
+  color: #fff;
+  cursor: pointer;
+}
+
+.account-menu-option {
+  color: #000;
+}
+
+.logout-button {
+  background: none;
+  border: none;
+  padding: 5px 12px;
+  color: #000;
+  width: 100%;
+  text-align: start;
+}
+
+.logout-button:hover {
+  background-color: #f5f5f5;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+nz-content {
+  margin: 80px 16px 24px 16px;
+  overflow: auto;
+  height: 100vh;
+}
+
+.inner-content {
+  padding: 24px;
+  background: #fff;
+  min-height: 360px;
+}
+
+nz-footer {
+  text-align: center;
+}

@@ -10,7 +10,7 @@ export class AuthService {
       id: 1,
       name: 'Israel Sandrino',
       username: 'israel.sandrino',
-      password: 'teste123'
+      password: 'Ongame3635@'
     }
   ]
 
