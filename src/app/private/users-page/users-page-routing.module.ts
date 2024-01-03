@@ -6,6 +6,7 @@ const routes: Routes = [
   { path: '', component: UsersPageComponent, children: [
     { path: '', pathMatch: 'full', redirectTo: 'inicio' },
     { path: 'inicio', loadChildren: () => import('./pages/inicio/inicio.module').then(m => m.InicioModule) },
+    { path: 'perfil', loadChildren: () => import('./pages/perfil/perfil.module').then(m => m.PerfilModule) },
     { path: 'faq', loadChildren: () => import('./pages/faq/faq.module').then(m => m.FaqModule) },
     { path: 'chamados', loadChildren: () => import('./pages/chamados/chamados.module').then(m => m.ChamadosModule) },
     { path: 'chamados/chamado-view', loadChildren: () => import('./pages/chamados/chamado-view/chamado-view.module').then(m => m.ChamadoViewModule)},

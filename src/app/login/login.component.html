@@ -1,8 +1,76 @@
-<div id="container" [formGroup]="form">
-  <h1>Login</h1>
+<div nz-row id="container">
+  <div nz-col nzXs="0" nzSm="0" nzMd="0" nzLg="16" id="solutions-container">
+    <h2>Telemetria Premium</h2>
 
-  <input type="text" formControlName="username" placeholder="Username">
-  <input type="password" formControlName="password" placeholder="Password">
+    <div class="solutions-content">
+      <img src="https://wikidados-com-br.umbler.net/wp-content/uploads/2023/05/kpi.jpg" alt="Telemetria Premium">
 
-  <button (click)="login()" [disabled]="!form.valid">Log In</button>
+      <div class="solutions-content-text">
+        <p>
+          A Telemetria Premium é uma solução avançada de telemetria que oferece diversos recursos para aprimorar a gestão de frotas.<br><br>
+          Completa,  entrega grandes resultados na economia de recursos, redução da ociosidade e manutenção dos veículos, aumento da segurança e no desenvolvimento pessoal do motorista.
+        </p>
+
+        <a href="https://wikidados.com.br/">Saiba Mais</a>
+      </div>
+    </div>
+  </div>
+
+  <div nz-col nzXs="24" nzSm="24" nzMd="24" nzLg="8" class="login-content">
+    <div class="login-content-logo">
+      <img
+        src="https://app.wikidados.com.br/statics/img/logo/logo_horizontal.png"
+        alt="Logo Wikidados">
+    </div>
+
+    <div class="login-content-form">
+      <form nz-form [formGroup]="validateForm" class="login-form">
+        <nz-form-item>
+          <nz-form-control nzErrorTip="Por favor insira seu usuário!">
+            <nz-input-group nzPrefixIcon="user">
+              <input type="text" nz-input formControlName="username" placeholder="Usuário" />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+          <nz-input-group nzPrefixIcon="lock" [nzSuffix]="suffixTemplate">
+            <input
+              [type]="passwordVisible ? 'text' : 'password'"
+              nz-input
+              placeholder="Senha"
+              [(ngModel)]="password"
+              formControlName="password"
+            />
+          </nz-input-group>
+          <ng-template #suffixTemplate>
+            <span
+              nz-icon
+              [nzType]="passwordVisible ? 'eye-invisible' : 'eye'"
+              (click)="passwordVisible = !passwordVisible"
+            ></span>
+          </ng-template>
+        </nz-form-item>
+        <div nz-row class="login-form-margin">
+          <div nz-col class="login-form-remember" [nzSpan]="12">
+            <input type="checkbox">
+            <label nz-checkbox formControlName="remember">
+              <span>Lembrar me</span>
+            </label>
+          </div>
+          <div nz-col [nzSpan]="12">
+            <a class="login-form-forgot">Esqueceu sua senha?</a>
+          </div>
+        </div>
+        <button nz-button (click)="login()" class="login-form-button login-form-margin" [nzType]="'primary'" [disabled]="!validateForm.valid">Entrar</button>
+      </form>
+
+      <div class="login-whatsapp">
+        <a href="https://api.whatsapp.com/send/?phone=554531129905&text&type=phone_number&app_absent=0">
+          (45) 3112-9905
+          <span nz-icon nzType="whats-app" nzTheme="outline"></span>
+        </a>
+      </div>
+    </div>
+
+  </div>
 </div>

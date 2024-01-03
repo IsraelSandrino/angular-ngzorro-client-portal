@@ -9,7 +9,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.less']
 })
 export class LoginComponent {
-  form: FormGroup = this.fb.group({
+
+  passwordVisible = false;
+  password?: string;
+
+  validateForm: FormGroup = this.fb.group({
     username: ['', Validators.required],
     password: ['', Validators.required]
   })
@@ -18,12 +22,12 @@ export class LoginComponent {
 
   login(){
     let user = this.authService.login(
-      this.form.value.username,
-      this.form.value.password
+      this.validateForm.value.username,
+      this.validateForm.value.password
     );
 
     if(!user){
-      alert('Username or password invalid');
+      alert('Usuário ou senha inválido!');
     } else {
       this.router.navigateByUrl('/private');
     }
