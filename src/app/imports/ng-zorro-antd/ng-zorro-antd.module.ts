@@ -31,6 +31,7 @@ import { NzGridModule } from 'ng-zorro-antd/grid';
 import { NzTimelineModule } from 'ng-zorro-antd/timeline';
 import { NzCommentModule } from 'ng-zorro-antd/comment';
 import { NzEmptyModule } from 'ng-zorro-antd/empty';
+import { NzCheckboxModule } from 'ng-zorro-antd/checkbox';
 
 @NgModule({
   declarations: [],
@@ -66,6 +67,7 @@ import { NzEmptyModule } from 'ng-zorro-antd/empty';
     NzTimelineModule,
     NzCommentModule,
     NzEmptyModule,
+    NzCheckboxModule
   ]
 })
 export class NgZorroAntdModule { }

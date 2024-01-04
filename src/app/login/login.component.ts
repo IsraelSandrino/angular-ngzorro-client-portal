@@ -14,15 +14,16 @@ export class LoginComponent {
   password?: string;
 
   validateForm: FormGroup = this.fb.group({
-    username: ['', Validators.required],
-    password: ['', Validators.required]
+    email: ['', Validators.required],
+    password: ['', Validators.required],
+    remember: [true]
   })
 
   constructor(private authService: AuthService, private fb: FormBuilder, private router: Router) {}
 
   login(){
     let user = this.authService.login(
-      this.validateForm.value.username,
+      this.validateForm.value.email,
       this.validateForm.value.password
     );
 

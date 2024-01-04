@@ -3,7 +3,7 @@
     <h2>Telemetria Premium</h2>
 
     <div class="solutions-content">
-      <img src="https://wikidados-com-br.umbler.net/wp-content/uploads/2023/05/kpi.jpg" alt="Telemetria Premium">
+      <img src="https://wikidados.com.br/assets/wiki/img/produtos/telemetria/telemetria.jpg" alt="Telemetria Premium">
 
       <div class="solutions-content-text">
         <p>
@@ -28,7 +28,12 @@
         <nz-form-item>
           <nz-form-control nzErrorTip="Por favor insira seu usuário!">
             <nz-input-group nzPrefixIcon="user">
-              <input type="text" nz-input formControlName="username" placeholder="Usuário" />
+              <input
+                type="email"
+                nz-input
+                formControlName="email"
+                placeholder="Email"
+              />
             </nz-input-group>
           </nz-form-control>
         </nz-form-item>
@@ -52,7 +57,6 @@
         </nz-form-item>
         <div nz-row class="login-form-margin">
           <div nz-col class="login-form-remember" [nzSpan]="12">
-            <input type="checkbox">
             <label nz-checkbox formControlName="remember">
               <span>Lembrar me</span>
             </label>

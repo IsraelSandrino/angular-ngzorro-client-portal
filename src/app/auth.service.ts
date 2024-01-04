@@ -9,7 +9,7 @@ export class AuthService {
     {
       id: 1,
       name: 'Israel Sandrino',
-      username: 'israel.sandrino',
+      email: 'israel.sandrino@wikidados.com.br',
       password: 'Ongame3635@'
     }
   ]
@@ -25,8 +25,8 @@ export class AuthService {
     this.session = session;
   }
 
-  login(username: string, password: string, ){
-    let user = this.users.find((u) => u.username===username && u.password===password);
+  login(email: string, password: string, ){
+    let user = this.users.find((u) => u.email===email && u.password===password);
 
     if(user){
       this.session = user;

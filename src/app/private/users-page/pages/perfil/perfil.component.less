@@ -1,0 +1,57 @@
+#profile-content{
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 992px) {
+    flex-direction: row;
+  }
+}
+
+.user-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width: 992px) {
+    justify-content: start;
+  }
+
+  img{
+    height: 120px;
+    width: fit-content;
+    max-width: 120px;
+    border-radius: 100px;
+  }
+
+  span{
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 62px;
+    background: #fff;
+    padding: 6px;
+    border-radius: 20px;
+    border: 1px solid #000;
+  }
+}
+
+.user-info {
+  margin-top: 24px;
+}
+
+.user-info__name-content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  span{
+    overflow: hidden;
+  }
+}
+
+.enterprise-info {
+  margin-top: 40px;
+
+  @media (min-width:992px) {
+    margin-top: 0;
+  }
+}
